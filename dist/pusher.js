@@ -359,7 +359,7 @@
         if (typeof arguments[i] === "string") {
           m.push(arguments[i]);
         } else {
-          if (window.JSON === undefined) {
+          if (window && window.JSON === undefined) {
             m.push(arguments[i].toString());
           } else {
             m.push(JSON.stringify(arguments[i]));
